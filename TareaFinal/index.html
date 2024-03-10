@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Autor" content="Kerly Gualpa">
+    <meta name="Curso" content="2º DAW">
+    <meta name="Fecha" content="10/03/2024">
+    <meta name="Version" content="3">
+    <title>Alquiler de Coches</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Alquiler de Coches</h1>
+        <div id="headerButtons">
+            <button id="cerrarSesion" style="display: none;">Cerrar Sesión</button>
+            <button id="verReservas" style="display: none;">Ver Coches Reservados</button>
+            <button id="volverCoches" style="display: none;">Volver a Coches Disponibles</button>
+        </div>
+    </header>
+
+    <div class="container" id="loginPage">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <input type="email" id="correoLogin" placeholder="Correo electrónico" required><br><br>
+            <input type="password" id="contrasenaLogin" placeholder="Contraseña" required><br><br>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p>¿No tienes una cuenta? <a href="#" id="mostrarRegistro">Registrarse</a></p>
+    </div>
+
+    <div class="container" id="registroPage" style="display: none;">
+        <h2>Registrarse</h2>
+        <form id="registroForm">
+            <input type="text" id="nombre" placeholder="Nombre" required><br><br>
+            <input type="email" id="correo" placeholder="Correo electrónico" required><br><br>
+            <input type="password" id="contrasena" placeholder="Contraseña" required><br><br>
+            <button type="submit">Registrarse</button>
+        </form>
+        <p>¿Ya tienes una cuenta? <a href="#" id="mostrarLogin">Iniciar Sesión</a></p>
+    </div>
+
+    <div class="container" id="cochesPage" style="display: none;">
+        <table id="tablaCoches">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Año</th>
+                    <th>Kilometraje</th>
+                    <th>Precio</th>
+                    <th></th> 
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se cargara la tabla con los coches. -->
+            </tbody>
+        </table>
+    </div>        
+
+    <div class="container" id="reservasPage" style="display: none;">
+        <h2>Coche Reservados</h2>
+        <table id="tablaReservas">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Año</th>
+                    <th>Kilometraje</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se cargarán los coches reservados.-->
+            </tbody>
+        </table>       
+        <button id="eliminarReservas">Eliminar Reservas</button>
+    </div>
+    <div id="formularioReserva" style="display: none;">
+        <h2>Seleccione la fecha deseada para la reserva</h2>
+        <label for="fechaReserva">Fecha de reserva:</label>
+        <input type="date" id="fechaReserva" required>
+        <button id="confirmarReserva">Confirmar reserva</button>
+    </div>
+    <footer>
+        <h3>Kerly Noemy Gualpa Sarango </h3>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
